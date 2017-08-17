@@ -1,27 +1,13 @@
+// test tracery here before deploying
 // https://npm.runkit.com/tracery-grammar
+// deploys to
+// http://cheapbotsdonequick.com/source/garos_v_fodos
 
+// test lengths
 // .............................................
 // Can our hero survive the onslaught?
 // ......................................................................
 // I am going to defeat you like the worthless weakling that you are!
-
-
-// finished:
-// insultRiposte
-//      garosInsult
-//      fodosRiposte
-// silence
-// fodosPowerUp
-// garosPowerUp
-// fodosAttack
-// garosUnscathed
-// garosAttack
-// garosCrush
-// garosRise
-// fodosCrush
-
-// pending:
-// fodosRopes
 
 // NB move names are too bland
 // NB only named moves should crush
@@ -29,6 +15,7 @@
 var tracery = require('tracery-grammar');
 
 var grammar = tracery.createGrammar(
+// only this bit of JSON gets pushed to CBDQ
 {
     "test": [
         "<p>#[insult_type:#insultType#]insultRiposte#</p><p>#silence1#, #silence2#.</p><p>#fodosPowerUp#</p><p>#garosPowerUp#</p><p>#fodosAttack#</p><p>#garosUnscathed#</p><p>#[moveUsed:#fodosMove#]fodosAttacksGaros#</p><p>#garosAttack#</p><p>#garosCrush#</p><p>#garosRise#</p><p>#fodosRopes#</p>"
