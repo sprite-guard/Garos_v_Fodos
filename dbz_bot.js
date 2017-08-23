@@ -17,13 +17,9 @@ var tracery = require('tracery-grammar');
 var grammar = tracery.createGrammar(
 // only this bit of JSON gets pushed to CBDQ
 {
-    "test": [
-        "<p>#[insult_type:#insultType#]insultRiposte#</p><p>#silence1#, #silence2#.</p><p>#fodosPowerUp#</p><p>#garosPowerUp#</p><p>#fodosAttack#</p><p>#garosUnscathed#</p><p>#[moveUsed:#fodosMove#]fodosAttacksGaros#</p><p>#garosAttack#</p><p>#garosCrush#</p><p>#garosRise#</p><p>#fodosRopes#</p>"
-    ],
-
     "origin": [
         "#fodosPowerUp# #fodosAttack# #garosUnscathed#",
-        "#garosAttack# #garosInsult#",
+        "#garosAttack# #[insult_type:#insultType#]garosInsult#",
         "#[moveUsed:#fodosMove#]fodosAttacksGaros# #garosAttack#",
         "#fodosAttack# #garosUnscathed# #garosAttack#",
         "#[insult_type:#insultType#]insultRiposte#",
